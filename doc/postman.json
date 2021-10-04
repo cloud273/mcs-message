@@ -1,0 +1,725 @@
+{
+	"info": {
+		"_postman_id": "6aa9a3ed-f5ac-4e81-a7bd-3aa02587ae3d",
+		"name": "message api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "account",
+			"item": [
+				{
+					"name": "http://localhost:4004/api/account",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"dungnguyen27384@gmail.com\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4004/api/account",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4004",
+							"path": [
+								"api",
+								"account"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "provider",
+			"item": [
+				{
+					"name": "http://localhost:4004/api/provider/email",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "0TnZF2TArcBp8r48MwNx1Fl0OMRS03KYbn6aUEMtn5hC9dXJiqa2wO9AvIdCJodHOBjiTF1KNXLpv897OnYQHF",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"host\": \"smtp.zoho.com\",\n\t\"sender\": \"cskh@datchonhanh.com\",\n\t\"password\": \"W7FzS6PgFAuw\",\n\t\"port\": 465,\n\t\"secure\": true\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4004/api/provider/email",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4004",
+							"path": [
+								"api",
+								"provider",
+								"email"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:4004/api/provider/email",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"type": "text",
+								"value": "0TnZF2TArcBp8r48MwNx1Fl0OMRS03KYbn6aUEMtn5hC9dXJiqa2wO9AvIdCJodHOBjiTF1KNXLpv897OnYQHF"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4004/api/provider/email?sender=cskh@datchonhanh.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4004",
+							"path": [
+								"api",
+								"provider",
+								"email"
+							],
+							"query": [
+								{
+									"key": "sender",
+									"value": "cskh@datchonhanh.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:4004/api/provider/apns",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "0TnZF2TArcBp8r48MwNx1Fl0OMRS03KYbn6aUEMtn5hC9dXJiqa2wO9AvIdCJodHOBjiTF1KNXLpv897OnYQHF",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"projectId\": \"mcs-cloud273\",\n\t\"key\": \"-----BEGIN PRIVATE KEY-----\\nMIGTAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBHkwdwIBAQQgGBmHMCRDJsWtdNfA\\nyRndSMx3xlz6GZNBgSzc8apzXiygCgYIKoZIzj0DAQehRANCAARU9LcezC7jTQbR\\nn5y05I/OYuW/uUnTtnpvUZKfuXUZlhgOThBytLhlGUbZpno5BnaYnqTnE0HWmf87\\nx1yPbgoM\\n-----END PRIVATE KEY-----\",\n\t\"keyId\": \"6S7RN3SB6Q\",\n\t\"teamId\": \"99J65Q2669\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4004/api/provider/apns",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4004",
+							"path": [
+								"api",
+								"provider",
+								"apns"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:4004/api/provider/apns",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"type": "text",
+								"value": "0TnZF2TArcBp8r48MwNx1Fl0OMRS03KYbn6aUEMtn5hC9dXJiqa2wO9AvIdCJodHOBjiTF1KNXLpv897OnYQHF"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4004/api/provider/apns?projectId=mcs-cloud273",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4004",
+							"path": [
+								"api",
+								"provider",
+								"apns"
+							],
+							"query": [
+								{
+									"key": "projectId",
+									"value": "mcs-cloud273"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:4004/api/provider/fcm",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "0TnZF2TArcBp8r48MwNx1Fl0OMRS03KYbn6aUEMtn5hC9dXJiqa2wO9AvIdCJodHOBjiTF1KNXLpv897OnYQHF",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"projectId\": \"mcs-cloud273\",\n\t\"privateKey\": \"-----BEGIN PRIVATE KEY-----\\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDNcyMFFVLKCd3C\\nVKCu8LVs/biaQ3JlQxTdBvibo7MB/7HT9nSxqxEDYDZvIfLufwI853Bj7kYXqs8o\\n80JWYU8UU6YSwoVYW6hoyhCL9QcqRrG4fnjluIBhtzyznQaD4cEuNNmy8ewm125n\\ney7af3x3WAKRuQi29aNpBnF/9ezigOGp8Ic4b7P49C9FsZOdmuEmI0xZB9X/7zOP\\n6BzaWPcHHYqtJ9MN37B9UtDaLHfXeg3qw60GxkgzPqzGAJt/7XgLL/OrGbdimudC\\nZuHLpi5/kWlyCVfBG7pcW3+ChzxhoPwtgHoshBw+//ITar+Kf02vvzdIr+6+by4i\\n4r64cCOhAgMBAAECggEABWFI6wu41zj4y1toWYpswtPWVSZT4SBXhBX4FcnMsM5F\\nhayiF8q4M2WeKUz7GckeSbJhFmHViK5AtmSf4aeS0MBDxKEeyS59x5A2jJa0G0Se\\nh+t6bqAVLxHjg1vW4UZctuE8C/BDQA1jSw8ODhtZat3lc9PTzUg7kS8RsvFRhKkh\\nr22RjQDNNzARht3wZDq9MMYyti0JH77LJG7M6ENS7MvlmzoEbBC8m0/LmH3gYP68\\n1zj+2bVlZ0PEhZCt0PkJLK7fHu74fDjxu7rqho3WrXt0M638QJhHtt5DrAfMoWo0\\nDgWRRGL6jtC6APPCc8COfOxvtp2KMXxnARuAXjFlAQKBgQDzUFFlHa/yNiTnonPd\\nRNmaC7rlg8VmhxGcjb2G0fILq18GcyKV99WrV4tH7pCE6GXQYMBpDeIxjURg9zxR\\nzjc2+mWWKUvUuWrOaW1nBieaF7tQ8s68BAxffb5nnF9R8MFWOsx5iCqFKNwddRIg\\nqt61EG6BthREBY2vsntOR7Y4IQKBgQDYKWvSmL5J3A0f4BtMxERTBnkl3Hw4oTMn\\nhxVc4fwbFV0Rhq8BuT4LcVQ0Yh4sU6W9pvnKskBN2o/U2kT0GId++/S/tQxjt90L\\njg+HEEj8DE1dfsNIwuHLQ5p8emVPxyBykqFQPT0BPaVJ4mlN65ZhMNb8jNr2E3oJ\\nwqjyO+Z7gQKBgQDcE5Prz/RrMsoise/2/eWMzntYSd3tJNKrNhFttswl/fXPkaiA\\n2VBs0Jxsjb4uWT5uQnUHEMW9aDenNTlcDRgoJEhqkCPE34lZ9kY8X3bGjByj1Vtk\\n+Ixwev4UHX6iUQ+u/TQh4SYEl7aw9klVPvh98cTikly2QgesGdYqMfcBwQKBgQDN\\n3Uz5yUxYrUC2ncmCJ91mMOEKBN0tVaCRQZ4/0l02Mfdr7JgZjSEg5rKqHNPdpWBQ\\nqYh12aNSQhf/QEyxJ/dLIYvrU/LTuVTEX2w8Vm8b1F+N7l7vmeJOojir2ilIfD1T\\nwH/vGhNSbjJPllhxxC94qnnlFgSmnM/6IbCi2hdcgQKBgHqZU9HUEMCBbc3WOr/a\\nuleGy5+LPoV/9PHj9F0Uep2cJ+U+XaA/2Apj0wxU2kBH0HSAQ6pig21ytE2XdMUL\\ndIQWfjZTtu61WvE+n6H7JC+G/8R8kfSVjuCXFZmgUUgKjn/fzUeqfSKOxVfON0ng\\nPG3kfZkcq0sxXLTlNm7iysgh\\n-----END PRIVATE KEY-----\\n\",\n\t\"clientEmail\": \"firebase-adminsdk-imub2@mcs-cloud273.iam.gserviceaccount.com\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4004/api/provider/fcm",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4004",
+							"path": [
+								"api",
+								"provider",
+								"fcm"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:4004/api/provider/fcm",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"type": "text",
+								"value": "0TnZF2TArcBp8r48MwNx1Fl0OMRS03KYbn6aUEMtn5hC9dXJiqa2wO9AvIdCJodHOBjiTF1KNXLpv897OnYQHF"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4004/api/provider/fcm?projectId=mcs-cloud273",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4004",
+							"path": [
+								"api",
+								"provider",
+								"fcm"
+							],
+							"query": [
+								{
+									"key": "projectId",
+									"value": "mcs-cloud273"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "apns",
+			"item": [
+				{
+					"name": "http://localhost:4004/api/apns",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "0TnZF2TArcBp8r48MwNx1Fl0OMRS03KYbn6aUEMtn5hC9dXJiqa2wO9AvIdCJodHOBjiTF1KNXLpv897OnYQHF",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"type\": \"test\",\n\t\"devices\": [\n\t\t\"4a968b15f3676f734b3b351061ccb2872a400f23b03e32fb36f30dacd164dcab\"\n\t\t],\n\t\"projectId\": \"mcs-cloud273\",\n\t\"appBundle\": \"com.cloud273.doctor\",\n\t\"title\": \"title\",\n\t\"body\": \"body\",\n\t\"payload\": {\n\t\t\"test\" : \"test\"\n\t},\n\t\"isProduction\": false\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4004/api/apns",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4004",
+							"path": [
+								"api",
+								"apns"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:4004/api/apns",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "0TnZF2TArcBp8r48MwNx1Fl0OMRS03KYbn6aUEMtn5hC9dXJiqa2wO9AvIdCJodHOBjiTF1KNXLpv897OnYQHF",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4004/api/apns?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4004",
+							"path": [
+								"api",
+								"apns"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:4004/api/apns/list",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "0TnZF2TArcBp8r48MwNx1Fl0OMRS03KYbn6aUEMtn5hC9dXJiqa2wO9AvIdCJodHOBjiTF1KNXLpv897OnYQHF",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4004/api/apns/list?projectId=mcs-cloud273&appBundle=com.cloud273.patient&type=test&device=22b4da4822247e10b84192175ecc77418609e52d2de85352700b147c3fca8476",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4004",
+							"path": [
+								"api",
+								"apns",
+								"list"
+							],
+							"query": [
+								{
+									"key": "projectId",
+									"value": "mcs-cloud273"
+								},
+								{
+									"key": "appBundle",
+									"value": "com.cloud273.patient"
+								},
+								{
+									"key": "type",
+									"value": "test",
+									"description": "optional"
+								},
+								{
+									"key": "device",
+									"value": "22b4da4822247e10b84192175ecc77418609e52d2de85352700b147c3fca8476",
+									"description": "optional"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "fcm",
+			"item": [
+				{
+					"name": "http://localhost:4004/api/fcm",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "0TnZF2TArcBp8r48MwNx1Fl0OMRS03KYbn6aUEMtn5hC9dXJiqa2wO9AvIdCJodHOBjiTF1KNXLpv897OnYQHF",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"type\": \"test\",\n\t\"devices\": [\n\t\t\"eoDYrvCWHSo:APA91bHI8RbbfjX77J6jDAQd07cqt3hPFwMcXYahES4Y9i-xthRCyi9d_88vwWe1MeFzz49WUkMB_dMD3BoL-1xJU7BF8yop77AY-9WYBj7WYWTQ_W79aXsO5Nn6tUtXF9SM1AWVXW9T\"\n\t\t],\n\t\"projectId\": \"mcs-cloud273\",\n\t\"title\": \"title\",\n\t\"body\": \"body\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4004/api/fcm",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4004",
+							"path": [
+								"api",
+								"fcm"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:4004/api/fcm",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "0TnZF2TArcBp8r48MwNx1Fl0OMRS03KYbn6aUEMtn5hC9dXJiqa2wO9AvIdCJodHOBjiTF1KNXLpv897OnYQHF",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4004/api/fcm?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4004",
+							"path": [
+								"api",
+								"fcm"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:4004/api/fcm/list",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "0TnZF2TArcBp8r48MwNx1Fl0OMRS03KYbn6aUEMtn5hC9dXJiqa2wO9AvIdCJodHOBjiTF1KNXLpv897OnYQHF",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4004/api/fcm/list?projectId=mcs-cloud273&type=test",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4004",
+							"path": [
+								"api",
+								"fcm",
+								"list"
+							],
+							"query": [
+								{
+									"key": "projectId",
+									"value": "mcs-cloud273"
+								},
+								{
+									"key": "type",
+									"value": "test",
+									"description": "optional"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "email",
+			"item": [
+				{
+					"name": "http://localhost:4004/api/email",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "0TnZF2TArcBp8r48MwNx1Fl0OMRS03KYbn6aUEMtn5hC9dXJiqa2wO9AvIdCJodHOBjiTF1KNXLpv897OnYQHF",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"to\": \"nglequduph@gmail.com\",\n\t\"sender\": \"cskh@datchonhanh.com\",\n\t\"subject\": \"subject\",\n\t\"type\": \"type\",\n\t\"message\": \"message\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4004/api/email",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4004",
+							"path": [
+								"api",
+								"email"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:4004/api/email",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "0TnZF2TArcBp8r48MwNx1Fl0OMRS03KYbn6aUEMtn5hC9dXJiqa2wO9AvIdCJodHOBjiTF1KNXLpv897OnYQHF",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4004/api/email?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4004",
+							"path": [
+								"api",
+								"email"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:4004/api/email/list",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "0TnZF2TArcBp8r48MwNx1Fl0OMRS03KYbn6aUEMtn5hC9dXJiqa2wO9AvIdCJodHOBjiTF1KNXLpv897OnYQHF",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4004/api/email/list?sender=cskh@datchonhanh.com&type=type&to=nglequduph@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4004",
+							"path": [
+								"api",
+								"email",
+								"list"
+							],
+							"query": [
+								{
+									"key": "sender",
+									"value": "cskh@datchonhanh.com"
+								},
+								{
+									"key": "type",
+									"value": "type",
+									"description": "optional"
+								},
+								{
+									"key": "to",
+									"value": "nglequduph@gmail.com",
+									"description": "optional"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "sms",
+			"item": [
+				{
+					"name": "http://localhost:4004/api/sms",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "0TnZF2TArcBp8r48MwNx1Fl0OMRS03KYbn6aUEMtn5hC9dXJiqa2wO9AvIdCJodHOBjiTF1KNXLpv897OnYQHF",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"phone\": \"0933270384\",\n\t\"type\": \"active\",\n\t\"message\": \"test message\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:4004/api/sms",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4004",
+							"path": [
+								"api",
+								"sms"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:4004/api/sms",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "0TnZF2TArcBp8r48MwNx1Fl0OMRS03KYbn6aUEMtn5hC9dXJiqa2wO9AvIdCJodHOBjiTF1KNXLpv897OnYQHF",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4004/api/sms?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4004",
+							"path": [
+								"api",
+								"sms"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:4004/api/sms/list",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "0TnZF2TArcBp8r48MwNx1Fl0OMRS03KYbn6aUEMtn5hC9dXJiqa2wO9AvIdCJodHOBjiTF1KNXLpv897OnYQHF",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4004/api/sms/list?type=active&phone=0933270384",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4004",
+							"path": [
+								"api",
+								"sms",
+								"list"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "active",
+									"description": "optional"
+								},
+								{
+									"key": "phone",
+									"value": "0933270384",
+									"description": "optional"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
