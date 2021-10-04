@@ -1,7 +1,7 @@
 # Git
 
-git submodule add https://cloud273.com:8027/library/node.git
-git clone --recurse-submodules https://cloud273.com:8027/service/message.git
+git submodule add https://github.com/cloud273/node-utility node
+git clone --recurse-submodules https://github.com/cloud273/mcs-message.git
 git pull --recurse-submodules
 
 git pull origin HEAD:master
