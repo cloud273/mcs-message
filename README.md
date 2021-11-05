@@ -1,5 +1,6 @@
 # Git
 
+
 ### Add submodule
 
 `
@@ -40,3 +41,14 @@ ncu -u
 `
 npm install
 `
+
+# SMS module
+
+Copy GsmModule_BK to GsmModule
+
+and
+
+`
+"serialport": "^9.2.3",
+`
+

@@ -23,8 +23,7 @@ export class SmsService {
                 })
             } else {
                 result = Result.serviceUnAvailable()
-            }   
-            result = Result.serviceUnAvailable()         
+            }           
         }
         return result
     }

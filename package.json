@@ -30,7 +30,6 @@
       "request": "^2.88.0",
       "request-promise": "^4.2.5",
       "routing-controllers": "^0.8.0",
-      "serialport": "^9.2.3",
       "sudo-js": "^1.0.2",
       "type-is": "^1.6.18",
       "typeorm": "^0.2.22",
