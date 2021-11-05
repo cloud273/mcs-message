@@ -33,10 +33,5 @@ export const Constant = {
         maxApns: 10,
         maxFcm: 10
     },
-    ssl: {
-        key: Path.join(__dirname, 'ssl/private.key'),
-        cert: Path.join(__dirname, 'ssl/certificate.crt'),
-        ca: Path.join(__dirname, 'ssl/ca_bundle.crt')
-    },
 }
 
