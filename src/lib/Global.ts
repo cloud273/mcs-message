@@ -1,5 +1,5 @@
-const TokenGenerator = require('uuid-token-generator');
-const moment = require('moment');
+import TokenGenerator = require('uuid-token-generator');
+import moment = require('moment');
 
 export class Global {
 

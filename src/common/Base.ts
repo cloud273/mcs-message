@@ -1,4 +1,4 @@
-import { CreateDateColumn, UpdateDateColumn, PrimaryGeneratedColumn, Column, VersionColumn } from "typeorm";
+import { CreateDateColumn, UpdateDateColumn, PrimaryGeneratedColumn, VersionColumn } from "typeorm";
 import { validate } from "class-validator";
 import { ScopeEntity, Scope, ScopeNested } from "../../node/library/decoration/ScopeEntity";
 import { Log } from "../../node/library/log/Log";

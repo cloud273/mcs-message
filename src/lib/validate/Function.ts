@@ -1,11 +1,10 @@
-import { Validator } from "class-validator";
+import { isArray, isString } from "class-validator";
 
 export function IsArrayString(array: any, maxLengthString: number) : boolean {
     let result = true
-    const validator = new Validator()
-    if (validator.isArray(array) && array.length > 0) {
+    if (isArray(array) && array.length > 0) {
         for (const str of array) {
-            if (validator.isString(str)) {
+            if (isString(str)) {
                 if (str.length > maxLengthString) {
                     result = false
                     break
