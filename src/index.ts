@@ -42,7 +42,6 @@ createConnection().then(async () => {
         controllers: [__dirname + "/controller/**/*ts"]
     })
 
-    // Test.run()
     console.log("Startup success at", new Date().toString())
 
 }).catch(error => console.log("Startup error", error));

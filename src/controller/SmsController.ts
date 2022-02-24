@@ -24,8 +24,8 @@ export class SmsController {
     @OnUndefined(RCode.badRequest)
     async gets(@Req() request: Request, @Res() response: Response) {
         const token = request.get("token")
-        const type = request.query.type
-        const phone = request.query.phone
+        const type = request.query.type as string
+        const phone = request.query.phone as string
         if (token != null && await new Sms(phone, null, type, null).verifySkipNull()) {
             const result = await SmsService.gets(type, phone, token)
             return response.status(result.code).send(result.data)

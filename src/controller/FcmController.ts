@@ -33,9 +33,9 @@ export class FcmController {
     @OnUndefined(RCode.badRequest)
     async gets(@Req() request: Request, @Res() response: Response) {
         const token = request.get("token")
-        const projectId = request.query.projectId
-        const type = request.query.type
-        const device = request.query.device
+        const projectId = request.query.projectId as string
+        const type = request.query.type as string
+        const device = request.query.device as string
         if (token != null && projectId != null && await new FcmProvider(projectId, null, null, null).verifySkipNull() && new Fcm(type, device, null, null, null, null, null, null).verifySkipNull()) {
             const result = await FcmService.gets(projectId, type, device, token)
             return response.status(result.code).send(result.data)

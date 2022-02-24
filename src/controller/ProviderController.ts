@@ -28,7 +28,7 @@ export class ProviderController {
     @OnUndefined(RCode.badRequest)
     async getEmailProvider(@Req() request: Request, @Res() response: Response): Promise<any> {
         const token = request.get("token")
-        const sender = request.query.sender
+        const sender = request.query.sender as string
         if (token != null && sender != null && await new EmailProvider(null, sender, null, null, null, null).verifySkipNull()) {
             const result = await ProviderService.getEmailProvider(sender, token)
             return response.status(result.code).send(result.data)
@@ -53,7 +53,7 @@ export class ProviderController {
     @OnUndefined(RCode.badRequest)
     async getApnsProvider(@Req() request: Request, @Res() response: Response): Promise<any> {
         const token = request.get("token")
-        const projectId = request.query.projectId
+        const projectId = request.query.projectId as string
         if (token != null && projectId != null && await new ApnsProvider(projectId, null, null, null, null).verifySkipNull()) {
             const result = await ProviderService.getApnsProvider(projectId, token)
             return response.status(result.code).send(result.data)
@@ -77,7 +77,7 @@ export class ProviderController {
     @OnUndefined(RCode.badRequest)
     async getFcmProvider(@Req() request: Request, @Res() response: Response): Promise<any> {
         const token = request.get("token")
-        const projectId = request.query.projectId
+        const projectId = request.query.projectId as string
         if (token != null && projectId != null && await new FcmProvider(projectId, null, null, null).verifySkipNull()) {
             const result = await ProviderService.getFcmProvider(projectId, token)
             return response.status(result.code).send(result.data)

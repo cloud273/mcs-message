@@ -27,9 +27,9 @@ export class EmailController {
     @OnUndefined(RCode.badRequest)
     async gets(@Req() request: Request, @Res() response: Response) {
         const token = request.get("token")
-        const type = request.query.type
-        const to = request.query.to
-        const sender = request.query.sender
+        const type = request.query.type as string
+        const to = request.query.to as string
+        const sender = request.query.sender as string
         if (token != null && sender != null && await new EmailProvider(null, sender, null, null, null, null).verifySkipNull() && await new Email(to, null, null, type, null).verifySkipNull()) {
             const result = await EmailService.gets(type, to, sender, token)
             return response.status(result.code).send(result.data)
