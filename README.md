@@ -5,7 +5,7 @@
 
 # Todo
 
-- Support notification to browsers
+- Support notification to browser
 
 # Develop
 
