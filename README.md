@@ -1,4 +1,13 @@
-# Git
+# Content
+
+- Message service is a micro service to help your server to send message/ notification to your mobile app (IOS/Android) and browser
+- Api list: https://github.com/cloud273/mcs-sso/blob/main/doc/openapi.yaml
+
+# Todo
+
+- Support notification to browsers
+
+# Develop
 
 
 ### Add submodule
